@@ -1,0 +1,370 @@
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ touch demo1 demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo2
+'Screenshot 2022-11-10 141401.jpg'   demo1
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ vi demo.java
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git remote add origin https://github.com/shubhchalakh/gitSept2022.git
+error: remote origin already exists.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/shubh_b65h2fk/Desktop/git/.git/
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo1
+'Screenshot 2022-11-10 141401.jpg'   demo.java                                demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ mkdir newfolder
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo1   newfolder/
+'Screenshot 2022-11-10 141401.jpg'   demo.java                                demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ cd newfolder
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git init
+Initialized empty Git repository in C:/Users/shubh_b65h2fk/Desktop/git/newfolder/.git/
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (master)
+$ touch 1 2 3 4
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (master)
+$ ls
+1  2  3  4
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (master)
+$ git branch -M main
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git add 1
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2
+        3
+        4
+
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git add*
+git: 'add*' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git add *
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1
+        new file:   2
+        new file:   3
+        new file:   4
+
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ echo "septdemo" >> README.md
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1
+        new file:   2
+        new file:   3
+        new file:   4
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git add *
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1
+        new file:   2
+        new file:   3
+        new file:   4
+        new file:   README.md
+
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git commit -m "first commit"
+[main (root-commit) c8d4d7f] first commit
+ 5 files changed, 1 insertion(+)
+ create mode 100644 1
+ create mode 100644 2
+ create mode 100644 3
+ create mode 100644 4
+ create mode 100644 README.md
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ cd..
+bash: cd..: command not found
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git/newfolder (main)
+$ cd ..
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo1   newfolder/
+'Screenshot 2022-11-10 141401.jpg'   demo.java                                demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Screenshot 2022-11-10 141401.jpg
+        commands=shubhchalakh_gitSept2022.pdf
+        demo.java
+        demo1
+        demo2
+        newfolder/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ gir add *
+bash: gir: command not found
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git add *
+warning: in the working copy of 'demo.java', LF will be replaced by CRLF the next time Git touches it
+warning: adding embedded git repository: newfolder
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> newfolder
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached newfolder
+hint:
+hint: See "git help submodule" for more information.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ^C
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git rm --cached newfolder
+error: the following file has staged content different from both the
+file and the HEAD:
+    newfolder
+(use -f to force removal)
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ -f
+bash: -f: command not found
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git rm --cached newfolder -f
+rm 'newfolder'
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo1   newfolder/
+'Screenshot 2022-11-10 141401.jpg'   demo.java                                demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git rm --cached newfolder
+fatal: pathspec 'newfolder' did not match any files
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ^C
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ rm newfolder
+rm: cannot remove 'newfolder': Is a directory
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ rm -r newfolder
+rm: remove write-protected regular file 'newfolder/.git/objects/c6/485fade86208c97f2218233f12696f506039de'?
+rm: cannot remove 'newfolder/.git/objects/c6': Directory not empty
+rm: remove write-protected regular file 'newfolder/.git/objects/c8/d4d7f8242fd8ec86cfe3d8c756eaf95a0274f8'?
+rm: cannot remove 'newfolder/.git/objects/c8': No such file or directory
+rm: cannot remove 'newfolder/.git/objects/d5': No such file or directory
+rm: cannot remove 'newfolder/.git/objects/e6': No such file or directory
+rm: cannot remove 'newfolder/.git/objects/info': No such file or directory
+rm: cannot remove 'newfolder/.git/objects/pack': No such file or directory
+rm: cannot remove 'newfolder/.git/refs': No such file or directory
+rm: cannot remove 'newfolder/1': No such file or directory
+rm: cannot remove 'newfolder/2': No such file or directory
+rm: cannot remove 'newfolder/3': No such file or directory
+rm: cannot remove 'newfolder/4': No such file or directory
+rm: cannot remove 'newfolder/README.md': No such file or directory
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Screenshot 2022-11-10 141401.jpg
+        new file:   commands=shubhchalakh_gitSept2022.pdf
+        new file:   demo.java
+        new file:   demo1
+        new file:   demo2
+
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git commit -m "first commit"
+[main 9be6984] first commit
+ 5 files changed, 7 insertions(+)
+ create mode 100644 Screenshot 2022-11-10 141401.jpg
+ create mode 100644 commands=shubhchalakh_gitSept2022.pdf
+ create mode 100644 demo.java
+ create mode 100644 demo1
+ create mode 100644 demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git branch -M main
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git remote add origin https://github.com/shubhchalakh/gitSept2022.git
+error: remote origin already exists.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git push -u origin main
+
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 180.96 KiB | 6.46 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/shubhchalakh/gitSept2022.git
+   ee9be29..9be6984  main -> main
+branch 'main' set up to track 'origin/main'.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git log
+commit 9be6984ce740960e9069f6bf6586f0d777fe31ca (HEAD -> main, origin/main)
+Author: shubh <shubhamchalakh@gmail.com>
+Date:   Thu Nov 10 15:42:55 2022 +0530
+
+    first commit
+
+commit ee9be294b9e0dff62998dd6bc98e74c3ef530fa5
+Author: 63957_shubham <shubhamchalakh@gmail.com>
+Date:   Thu Nov 10 14:40:42 2022 +0530
+
+    first commit
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git log -- oneline
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git log -- oneline
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git log --oneline
+9be6984 (HEAD -> main, origin/main) first commit
+ee9be29 first commit
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git chcekout ^C
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git checkoutee9be294b9e0dff62998dd6bc98e74c3ef530fa5
+git: 'checkoutee9be294b9e0dff62998dd6bc98e74c3ef530fa5' is not a git command. See 'git --help'.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ git checkout ee9be294b9e0dff62998dd6bc98e74c3ef530fa5
+Note: switching to 'ee9be294b9e0dff62998dd6bc98e74c3ef530fa5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ee9be29 first commit
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git ((ee9be29...))
+$ git checkout main
+Previous HEAD position was ee9be29 first commit
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$ ls
+ README.md                          'commands=shubhchalakh_gitSept2022.pdf'   demo1
+'Screenshot 2022-11-10 141401.jpg'   demo.java                                demo2
+
+shubh_b65h2fk@Administrator MINGW64 ~/Desktop/git (main)
+$

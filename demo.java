@@ -1,4 +1,4 @@
-ass demo{
+class demo{
 
 
 psvm(){sop()}
